@@ -35,7 +35,7 @@ RUN cd /root/steemit; \
         /usr/bin/test -n "$STEEMIT_COMMIT" && \
           git checkout $STEEMIT_COMMIT || \
           /bin/true \
-    ) \
+    )
 
 ADD server.js.diff /root/steemit/server/server.js.diff
 
