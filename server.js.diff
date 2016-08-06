@@ -1,5 +1,14 @@
 --- server.js.orig	2016-07-30 20:24:58.594831016 +0300
-+++ server.js	2016-08-05 22:09:15.016312855 +0300
++++ server.js	2016-08-06 09:33:30.090987012 +0300
+@@ -83,7 +83,7 @@
+ if (env === 'development') {
+     const PORT = parseInt(process.env.PORT, 10) + 1 || 3001;
+     const proxy = require('koa-proxy')({
+-        host: 'http://0.0.0.0:' + PORT,
++        host: 'http://127.0.0.1:' + PORT,
+         map: (filePath) => 'assets/' + filePath
+     });
+     app.use(mount('/assets', proxy));
 @@ -115,7 +115,7 @@
  
      const argv = minimist(process.argv.slice(2));

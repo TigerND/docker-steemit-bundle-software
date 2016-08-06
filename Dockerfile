@@ -18,7 +18,7 @@ RUN ( \
             node-gyp \
     )
     
-ENV NODE_ENV production
+ENV NODE_ENV development
 
 ENV STEEMIT_REPOSITORY https://github.com/steemit/steemit.com
 ENV STEEMIT_COMMIT e5f8b881fedb870245222d2acf6c9bd3c0a5d792
