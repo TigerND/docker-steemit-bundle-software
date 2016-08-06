@@ -37,6 +37,14 @@ RUN cd /root/steemit; \
           /bin/true \
     )
 
+ADD dev.config.js.diff /root/steemit/webpack/dev.config.js.diff
+
+RUN cd /root/steemit/webpack/; \
+    ( \
+        cat dev.config.js.diff && \
+        patch <dev.config.js.diff \
+    )
+    
 ADD server.js.diff /root/steemit/server/server.js.diff
 
 RUN cd /root/steemit/server/; \
