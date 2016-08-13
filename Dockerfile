@@ -21,7 +21,7 @@ RUN ( \
 ENV NODE_ENV development
 
 ENV STEEMIT_REPOSITORY https://github.com/steemit/steemit.com
-ENV STEEMIT_COMMIT e5f8b881fedb870245222d2acf6c9bd3c0a5d792
+ENV STEEMIT_COMMIT ab4be6a84ccd3f0e15ec2045db48172f30bbc0e8
     
 RUN figlet 'steemit.com '
 
